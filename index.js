@@ -40,3 +40,30 @@ console.log(problemForPallavi);
 
 const test = ("ba" + +"a" + "a").toLowerCase();
 console.log(test);
+
+// Arrays & Objects
+
+var pallaviDetails = {
+  name: "Pallavi",
+  age: 23,
+  isSingle: true,
+  address: "Amritsar",
+  test: "Garbage Data",
+  personalInfo: {
+    hobbies: "Music",
+  },
+};
+
+var fruits = [
+  "mango",
+  "apple",
+  89,
+  {
+    personalInfo: {
+      hobbies: "Music",
+    },
+  },
+];
+
+console.log(pallaviDetails);
+console.log(fruits);
