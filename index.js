@@ -67,3 +67,34 @@ var fruits = [
 
 console.log(pallaviDetails);
 console.log(fruits);
+
+// Functions
+
+function printMyName() {
+  console.log("Jorav");
+  return "Jorav";
+}
+
+printMyName();
+
+function convertToNumber(arg) {
+  return Number(arg);
+}
+
+function sumOfTwoNumbers(var1, var2) {
+  var1 = convertToNumber(var1);
+  var2 = convertToNumber(var2);
+  return var1 + var2;
+}
+
+console.log(sumOfTwoNumbers("10", 5));
+console.log(sumOfTwoNumbers(2, 6));
+console.log(sumOfTwoNumbers(2, 7));
+
+// Task for Pallavi
+
+function makeObjectOfUser(name, age, address, dob, hobbies, isSingle) {
+  // return of User Object
+}
+
+console.log(makeObjectOfUser())
