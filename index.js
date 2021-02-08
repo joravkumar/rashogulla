@@ -97,4 +97,21 @@ function makeObjectOfUser(name, age, address, dob, hobbies, isSingle) {
   // return of User Object
 }
 
-console.log(makeObjectOfUser())
+console.log(makeObjectOfUser());
+
+setTimeout(function () {
+  console.log("Pallavis' set time out function");
+}, 1000);
+// Task to stop Set Interval after 5 second
+// setInterval( function() {
+//   console.log("Pallavis' set Interval function");
+// }, 1000);
+// debugger;
+function handleButton() {
+  console.log("Button Clicked");
+}
+var btn = document.getElementById('pallavi-btn');
+
+btn.addEventListener("click", handleButton);
+
+// Task: eventlistener on hover 
