@@ -1,4 +1,5 @@
 // First Session
+// debugger;
 
 // alert('Hello Pallavi');
 var name = "Pallavi";
@@ -9,6 +10,7 @@ var no;
 var same = null;
 var isPallaviOld = false;
 var fruits = ["mango"];
+// console.log(newFunction())
 
 var newFunction = function () {
   return "yipee";
@@ -98,6 +100,7 @@ function makeObjectOfUser(name, age, address, dob, hobbies, isSingle) {
 }
 
 console.log(makeObjectOfUser());
+handleButton();
 
 setTimeout(function () {
   console.log("Pallavis' set time out function");
@@ -106,8 +109,16 @@ setTimeout(function () {
 // setInterval( function() {
 //   console.log("Pallavis' set Interval function");
 // }, 1000);
+
 // debugger;
 function handleButton() {
+  var testVariableHoist = 'Jaanu';
+  {
+    const testVariableSecond = 'Boo';
+    {
+      const boombaam = "pal"
+    }
+  }
   console.log("Button Clicked");
 }
 var btn = document.getElementById('pallavi-btn');
