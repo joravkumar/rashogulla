@@ -112,17 +112,30 @@ setTimeout(function () {
 
 // debugger;
 function handleButton() {
-  var testVariableHoist = 'Jaanu';
+  var testVariableHoist = "Jaanu";
   {
-    const testVariableSecond = 'Boo';
+    const testVariableSecond = "Boo";
     {
-      const boombaam = "pal"
+      const boombaam = "pal";
     }
   }
   console.log("Button Clicked");
 }
-var btn = document.getElementById('pallavi-btn');
 
-btn.addEventListener("click", handleButton);
+// Task: eventlistener on hover
 
-// Task: eventlistener on hover 
+function saveForm(e) {
+  e.preventDefault();
+  const username = document.getElementById("username").value;
+  const single = document.getElementById("single").checked;
+  console.log(single);
+  const isSingle = single ? true : false;
+  showFormValues(username, isSingle);
+}
+
+function showFormValues(name, isSingle) {
+  const container = document.getElementById("print-form");
+  container.innerHTML = `<div>Username: ${name}</div><div>${
+    isSingle ? "Single" : "Not Single"
+  }</div>`;
+}

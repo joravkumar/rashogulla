@@ -7,8 +7,33 @@
     <link rel="stylesheet" href="./css/style.min.css" />
   </head>
   <body>
-    Hello Javascript
-    <button id="pallavi-btn">Click Me</button>
+    <form onsubmit="saveForm(event)">
+      <label
+        >Username: <input type="text" name="username" id="username"
+      /></label>
+      <label>Age: <input type="number" name="age" id="age" /></label>
+      <label>Date of Birth: <input type="date" name="dob" id="dob" /></label>
+      <span>Marital Status</span>
+      <label
+        >Single:
+        <input type="radio" name="marital-status" id="single" value="single"
+      /></label>
+      <label
+        >Not Single:
+        <input
+          type="radio"
+          name="marital-status"
+          id="not-single"
+          value="married"
+      /></label>
+      <label
+        >Address:
+        <textarea name="address" id="address" cols="30" rows="10"></textarea>
+      </label>
+      <label>Hobbies: <input type="text" name="hobbies" id="hobbies" /></label>
+      <input type="submit" value="Save Form" />
+    </form>
+    <div class="print-form" id="print-form"></div>
   </body>
   <script src="./index.js"></script>
 </html>
