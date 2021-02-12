@@ -85,8 +85,7 @@ function sumOfTwoNumbers(var1, var2) {
   var1 = convertToNumber(var1);
   var2 = convertToNumber(var2);
   return var1 + var2;
-}
-
+} 
 console.log(sumOfTwoNumbers("10", 5));
 console.log(sumOfTwoNumbers(2, 6));
 console.log(sumOfTwoNumbers(2, 7));
@@ -94,6 +93,16 @@ console.log(sumOfTwoNumbers(2, 7));
 // Task for Pallavi
 
 function makeObjectOfUser(name, age, address, dob, hobbies, isSingle) {
+  var Pallobj = {
+    name:  name,
+    age: 23,
+    address: "Amritsar",
+    dob : "22.06.1997",
+    hobbies: "Music",
+    isSingle : true,
+  };
+  // Return it
+  return Pallobj;
   // return of User Object
 }
 
@@ -103,9 +112,10 @@ setTimeout(function () {
   console.log("Pallavis' set time out function");
 }, 1000);
 // Task to stop Set Interval after 5 second
-// setInterval( function() {
-//   console.log("Pallavis' set Interval function");
-// }, 1000);
+var myInterval = setInterval(function() {
+  console.log("Pallavis' set Interval function");
+}, 5000);
+clearInterval(myInterval);
 // debugger;
 function handleButton() {
   console.log("Button Clicked");
