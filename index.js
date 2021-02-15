@@ -127,15 +127,25 @@ function handleButton() {
 function saveForm(e) {
   e.preventDefault();
   const username = document.getElementById("username").value;
+  const age = document.getElementById("age").value;
+  const dob = document.getElementById("dob").value;
+  const address = document.getElementById("address").value;
+  const hobbies = document.getElementById("hobbies").value;
   const single = document.getElementById("single").checked;
-  console.log(single);
-  const isSingle = single ? true : false;
-  showFormValues(username, isSingle);
+  const isSingle = single ? "Single" : "Not Single";
+  showFormValues(username, age, dob, address, hobbies, isSingle);
 }
 
-function showFormValues(name, isSingle) {
+function showFormValues(name, age, dob, address, hobbies, isSingle) {
   const container = document.getElementById("print-form");
-  container.innerHTML = `<div>Username: ${name}</div><div>${
-    isSingle ? "Single" : "Not Single"
-  }</div>`;
+  container.innerHTML = `<div>Username: ${name}</div>
+  <div>Age: ${age}</div>
+  <div>Date of Birth: ${dob}</div>
+  <div>Address: ${address}</div>
+  <div>hobbies: ${hobbies}</div>
+  <div>Status: ${isSingle}</div>
+  `;
 }
+
+// Task
+function saveForm() {}

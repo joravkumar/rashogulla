@@ -12,7 +12,17 @@
         >Username: <input type="text" name="username" id="username"
       /></label>
       <label>Age: <input type="number" name="age" id="age" /></label>
-      <label>Date of Birth: <input type="date" name="dob" id="dob" /></label>
+      <label
+        >Date of Birth:
+        <input
+          type="date"
+          name="dob"
+          id="dob"
+          placeholder="dd-mm-yyyy"
+          value=""
+          min="1997-01-01"
+          max="2030-12-31"
+      /></label>
       <span>Marital Status</span>
       <label
         >Single:
@@ -25,6 +35,7 @@
           name="marital-status"
           id="not-single"
           value="married"
+          checked
       /></label>
       <label
         >Address:
@@ -34,6 +45,7 @@
       <input type="submit" value="Save Form" />
     </form>
     <div class="print-form" id="print-form"></div>
+    <div><button>Save Data</button></div>
   </body>
   <script src="./index.js"></script>
 </html>
