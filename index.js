@@ -123,19 +123,24 @@ function handleButton() {
 }
 
 function isFormValid(name, age, dob, address, hobbies, isSingle) {
-  const errors = {};
+  var errors = {};
   if (name === "") errors.hasNameError = true;
   if (age === "") errors.hasAgeError = true;
   if (dob === "") errors.hasDobError = true;
   if (address === "") errors.hasAddressError = true;
   if (hobbies === "") errors.hashobbiesError = true;
+  console.log(errors);
+
   return errors;
 }
 
 // Task: eventlistener on hover
 
+// document.getElementById("user-form").addEventListener("submit", saveForm);
+
 function saveForm(e) {
-  e.preventDefault();
+  debugger;
+  console.log(e);
   const username = document.getElementById("username").value;
   const age = document.getElementById("age").value;
   const dob = document.getElementById("dob").value;
