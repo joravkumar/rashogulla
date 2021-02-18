@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Counter</title>
+</head>
+<body>
+    <button id="subtractBtn" onclick="subtractBtn()">-</button>
+    <span id="counter"> 0</span>
+    <button id="addBtn" onclick="addBtn()">+</button>
+    <script>
+         var i = 0;
+    function addBtn() {
+        i++;
+        document.getElementById("counter").innerHTML = i;
+        // console.log (i);
+
+    }
+    function subtractBtn() {
+        i--;
+        document.getElementById("counter").innerHTML = i;
+        // console.log (i);
+    }
+    </script>
+    <!-- <script>
+    function counter_count() {
+        var subtractBtn = 0;
+        subtractBtn--;
+        document.getElementById("counter").innerHTML = subtractBtn;
+        // console.log (i);
+        var addBtn = 0;
+        addBtn++;
+        document.getElementById("counter").innerHTML = addBtn;
+        // console.log (i);
+    }
+
+    </script> -->
+</body>
+</html>
