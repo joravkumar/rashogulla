@@ -7,10 +7,25 @@
     <title>Form Sample</title>
   </head>
   <body>
-    <form>
-      <input type="text" />
-      <input type="submit" />
+    <form onsubmit="saveForm(event)" id='test-form'>
+      <input type="text" name="test" id="test"/>
+      <input type="submit" value="Save Form" />
     </form>
-    <div id="print-form"></div>
+     <div class="print-form" id="print-test-form"></div>
   </body>
+  <script>
+    function saveForm(e) {
+  console.log(e);
+  const test = document.getElementById("test").value;
+  const formValidation = isFormValid(
+    test,
+  );
+    }
+  </script>
+  <script>
+    function showFormValues(name, age, dob, address, hobbies, isSingle) {
+  const container = document.getElementById("print-form");
+  container.innerHTML = `<div>Test: ${test}</div>`;
+}
+  </script>
 </html>
