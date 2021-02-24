@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>KPL - Kochar Premier League</title>
+  </head>
+  <body>
+    <h1>KPL - Kochar Premier League</h1>
+    <div>
+      <input type="text" name="" id="player-input" />
+      <button onclick="addPlayerInTeam()">Add Player</button>
+    </div>
+    <div class="print-players" id="print-players"></div>
+  </body>
+
+  <script>
+    var players = [];
+    var playersElement = document.getElementById("print-players");
+    function addPlayerInTeam() {
+      let playerElement = document.getElementById("player-input");
+      players.push(playerElement.value);
+      printPlayers();
+      playerElement.value = "";
+    }
+
+    function printPlayers() {
+      var allPlayers = "";
+      for (let i = 0; i < players.length; i++) {
+        allPlayers += `<span>Player ${players[i]}</span><br />`;
+      }
+      playersElement.innerHTML = allPlayers;
+    }
+  </script>
+</html>
