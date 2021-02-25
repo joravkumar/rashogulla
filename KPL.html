@@ -7,8 +7,8 @@
     <title>KPL - Kochar Premier League</title>
   </head>
   <style>
-    #player-error{
-      color:red;
+    #player-error {
+      color: red;
     }
   </style>
   <body>
@@ -16,10 +16,15 @@
     <div>
       <!-- <form onsubmit=" myFunction()" name="RegForm" id="playerForm" > -->
       <input type="text" name="playerInput" id="player-input" />
-      
+
       <div><span id="player-error"></span></div>
-      <input type="submit" onclick="addPlayerInTeam()" name="Add Player" value="Add Player">
-    <!-- </form> -->
+      <input
+        type="submit"
+        onclick="addPlayerInTeam()"
+        name="Add Player"
+        value="Add Player"
+      />
+      <!-- </form> -->
     </div>
     <div class="print-players" id="print-players"></div>
   </body>
@@ -28,31 +33,37 @@
     var players = [];
     var playersElement = document.getElementById("print-players");
     function addPlayerInTeam() {
-      let error=document.getElementById("player-error");
+      let error = document.getElementById("player-error");
       let playerElement = document.getElementById("player-input");
-      if(playerElement.value!=""){
-        error.innerHTML=``;
+      if (playerElement.value != "") {
+        error.innerHTML = ``;
         players.push(playerElement.value);
-      printPlayers();
-      playerElement.value = "";
-      }else{
-     
-        error.innerHTML=`Please Enter Player Name`;
+        printPlayers();
+        playerElement.value = "";
+      } else {
+        error.innerHTML = `Please Enter Player Name`;
       }
-     
     }
 
     function printPlayers() {
       var allPlayers = "";
-      
-      for (let i = 0; i < players.length; i++) {
-        allPlayers += `<span>Player ${players[i]}</span><br />`;
-      }
+
+      players.forEach(function (playerName, index) {
+        allPlayers += `<span>Player ${playerName}</span><button onclick="deletePlayer(${index})">x</button><br />`;
+      });
+
+      // for (let i = 0; i < players.length; i++) {
+      //   var playerName = players[i];
+      //   allPlayers += `<span>Player ${players[i]}</span><button onclick="deletePlayer(${i})">x</button><br />`;
+      // }
       playersElement.innerHTML = allPlayers;
-     
+    }
+    function deletePlayer(playerIndex) {
+      // console.log("PLayer delete", playerIndex);
+      players.splice(playerIndex, 1);
+      printPlayers();
     }
   </script>
-
 
   <!-- <script>
  function myFunction() {

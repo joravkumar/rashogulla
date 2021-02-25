@@ -24,12 +24,12 @@
     function printStatements(count) {
       const container = document.getElementById("data");
       container.innerHTML = "";
+      console.log(textprint);
       for (var i = 0; i < count; i++) {
-        // var word = textprint.value;
-        var word = `i wolf you`;
+        var word = textprint.value;
+        // var word = `i wolf you`;
         container.innerHTML += `<div>${word} ${i + 1}</div>`;
       }
     }
   </script>
 </html>
-  
