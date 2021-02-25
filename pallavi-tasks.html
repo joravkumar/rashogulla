@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tasks</title>
+  </head>
+  <body>
+    <input type="text" placeholder="Enter any text" id="textprint" />
+    <input type="number" placeholder="Enter any Number" id="number-count" />
+    <button onclick="addNumber()">Click Me</button>
+    <div id="data"></div>
+  </body>
+  <script>
+    var i = 0;
+    const container = document.getElementById("data");
+    // const text = document.getElementById("textprint");
+    const count = document.getElementById("number-count");
+    function addNumber() {
+      const totalCount = count.value;
+      printStatements(totalCount);
+    }
+    function printStatements(count) {
+      const container = document.getElementById("data");
+      container.innerHTML = "";
+      for (var i = 0; i < count; i++) {
+        // var word = textprint.value;
+        var word = `i wolf you`;
+        container.innerHTML += `<div>${word} ${i + 1}</div>`;
+      }
+    }
+  </script>
+</html>
+  

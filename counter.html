@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Counter</title>
+  </head>
+  <body>
+    <button id="add-btn">+</button>
+    <span id="counter">0</span>
+    <button id="subtract-btn">-</button>
+  </body>
+  <script>
+    var counter = 0;
+    var addBtn = document.getElementById("add-btn");
+    var subtractBtn = document.getElementById("subtract-btn");
+    var counterElement = document.getElementById("counter");
+    addBtn.addEventListener("click", addCounter);
+    subtractBtn.addEventListener("click", subtractCounter);
+
+    function addCounter() {
+      counter++;
+      printCounter();
+    }
+    function subtractCounter() {
+      counter--;
+      printCounter();
+    }
+
+    function printCounter() {
+      counterElement.innerText = counter;
+    }
+  </script>
+</html>

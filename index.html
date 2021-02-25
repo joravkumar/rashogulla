@@ -4,11 +4,57 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>First Session</title>
-    <link rel="stylesheet" href="./css/style.min.css" />
+    <link rel="stylesheet" href="scss/style.scss" />
   </head>
   <body>
-    Hello Javascript
-    <button id="pallavi-btn">Click Me</button>
+    <form onsubmit="saveForm(event)" id='user-form'>
+      <label
+        >Username: <input type="text" name="username" id="username" />
+        <span id="username-error"></span>
+      </label>
+      <label
+        >Age: <input type="number" name="age" id="age" /><span
+          id="age-error"
+        ></span
+      ></label>
+      <label
+        >Date of Birth:
+        <input
+          type="date"
+          name="dob"
+          id="dob"
+          placeholder="dd-mm-yyyy"
+          value=""
+          min="1997-01-01"
+          max="2030-12-31" /><span id="dob-error"></span
+      ></label>
+      <span>Marital Status</span>
+      <label
+        >Single:
+        <input type="radio" name="marital-status" id="single" value="single"
+      /></label>
+      <label
+        >Not Single:
+        <input
+          type="radio"
+          name="marital-status"
+          id="not-single"
+          value="married"
+          checked
+      /></label>
+      <label
+        >Address:
+        <textarea name="address" id="address" cols="30" rows="10"></textarea>
+        <span id="address-error"></span>
+      </label>
+      <label
+        >Hobbies: <input type="text" name="hobbies" id="hobbies" />
+        <span id="hobbies-error"></span>
+      </label>
+      <input type="submit" value="Save Form" />
+    </form>
+    <div class="print-form" id="print-form"></div>
+    <div><button>Save Data</button></div>
   </body>
-  <script src="./index.js"></script>
+  <script src="index.js"></script>
 </html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form Sample</title>
+  </head>
+  <body>
+    <form onsubmit="saveForm(event)" id='test-form'>
+      <input type="text" name="test" id="test"/>
+      <input type="submit" value="Save Form" />
+    </form>
+     <div class="print-form" id="print-test-form"></div>
+  </body>
+  <script>
+    function saveForm(e) {
+  console.log(e);
+  const test = document.getElementById("test").value;
+  const formValidation = isFormValid(
+    test,
+  );
+    }
+  </script>
+  <script>
+    function showFormValues(name, age, dob, address, hobbies, isSingle) {
+  const container = document.getElementById("print-form");
+  container.innerHTML = `<div>Test: ${test}</div>`;
+}
+  </script>
+</html>
