@@ -45,6 +45,45 @@
       }
     }
 
+    // var addPlayerInTeam = function () {
+    //   let error = document.getElementById("player-error");
+    //   let playerElement = document.getElementById("player-input");
+    //   if (playerElement.value != "") {
+    //     error.innerHTML = ``;
+    //     players.push(playerElement.value);
+    //     printPlayers();
+    //     playerElement.value = "";
+    //   } else {
+    //     error.innerHTML = `Please Enter Player Name`;
+    //   }
+    // };
+
+    var addPlayerInTeam = () => {
+      let error = document.getElementById("player-error");
+      let playerElement = document.getElementById("player-input");
+      if (playerElement.value != "") {
+        error.innerHTML = ``;
+        players.push(playerElement.value);
+        printPlayers();
+        playerElement.value = "";
+      } else {
+        error.innerHTML = `Please Enter Player Name`;
+      }
+    };
+
+    // (function addPlayerInTeam() {
+    //   let error = document.getElementById("player-error");
+    //   let playerElement = document.getElementById("player-input");
+    //   if (playerElement.value != "") {
+    //     error.innerHTML = ``;
+    //     players.push(playerElement.value);
+    //     printPlayers();
+    //     playerElement.value = "";
+    //   } else {
+    //     error.innerHTML = `Please Enter Player Name`;
+    //   }
+    // })();
+
     function printPlayers() {
       var allPlayers = "";
 

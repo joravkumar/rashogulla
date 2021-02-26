@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>This</title>
+  </head>
+  <body>
+    This is topic here.
+  </body>
+  <script>
+    // debugger;
+    const test = {
+      age: 23,
+      func: function () {
+        // console.log(this);
+        return this.age + this.name;
+      },
+    };
+    console.log(test.func());
+    test["name"] = "Jorav";
+    console.log(test.func());
+
+    // function f() {
+    //   console.log(this);
+    //   return this.a;
+    // }
+
+    // var g = f.bind({ a: "azerty" });
+    // console.log(g()); // azerty
+
+    // var g = () => {
+    //   console.log(this);
+    //   return this;
+    // };
+
+    // console.log(g());
+    // In a browser:
+    // console.log(f1() === window); // true
+  </script>
+</html>
